@@ -1,0 +1,45 @@
+[
+{"type":"header","version":"4.7.4","comment":"Export to JSON plugin for PHPMyAdmin"},
+{"type":"database","name":"ekzamen"},
+{"type":"table","name":"articles","database":"ekzamen","data":
+[
+{"id":"1","title":"Avto","image":"test_1.jpg","text":"A toy was created by some one somewher oneday","categorie_id":"1","pubdate":"2018-01-16 21:50:49","views":"21"},
+{"id":"2","title":"Car","image":"test_2.jpg","text":"A toy was created by some one somewher oneday","categorie_id":"1","pubdate":"2018-01-16 21:54:18","views":"13"},
+{"id":"3","title":"Big screen","image":"test_5jpg","text":"All what you need this summer","categorie_id":"3","pubdate":"2018-01-17 03:41:04","views":"0"},
+{"id":"4","title":"Book Gary Poter","image":"test_3.jpg","text":"A toy was created by some one somewher oneday","categorie_id":"3","pubdate":"2018-01-16 21:54:32","views":"12"},
+{"id":"5","title":"Big girl","image":"test_1.jpg","text":"Kukla pozojayka","categorie_id":"2","pubdate":"2018-01-17 03:38:21","views":"0"},
+{"id":"7","title":"test_1.jpg","image":"test_1.jpg","text":"test_1.jpg","categorie_id":"3","pubdate":"2018-01-17 03:38:29","views":"0"},
+{"id":"8","title":"Computer","image":"test_1.jpg","text":"All what you need","categorie_id":"3","pubdate":"2018-01-17 03:38:29","views":"0"}
+]
+}
+,{"type":"table","name":"articles_categories","database":"ekzamen","data":
+[
+{"id":"1","title":"Toys for boys"},
+{"id":"2","title":"Toys for girls\r\n"},
+{"id":"3","title":"Toys for teenagers\r\n\r\n"}
+]
+}
+,{"type":"table","name":"orders","database":"ekzamen","data":
+[
+{"id":"1","id_product":"2","login":"Anvar"},
+{"id":"2","id_product":"5","login":"Anvar53"},
+{"id":"3","id_product":"3","login":"Akrom"}
+]
+}
+,{"type":"table","name":"orders_final","database":"ekzamen","data":
+[
+
+]
+}
+,{"type":"table","name":"users","database":"ekzamen","data":
+[
+{"id":"1","login":"Anvar53","email":"rodar@asd.ri","password":"40bd001563085fc35165329ea1ff5c5ecbdbbeef"},
+{"id":"2","login":"Galya","email":"petrovich@ll.ru","password":"40bd001563085fc35165329ea1ff5c5ecbdbbeef"},
+{"id":"3","login":"Aygul","email":"12@12.rj","password":"40bd001563085fc35165329ea1ff5c5ecbdbbeef"},
+{"id":"4","login":"Akrom","email":"akra@25","password":"40bd001563085fc35165329ea1ff5c5ecbdbbeef"},
+{"id":"11","login":"Anvar1","email":"rodari53@gmail.com","password":"40bd001563085fc35165329ea1ff5c5ecbdbbeef"},
+{"id":"12","login":"Anvar13","email":"rodari53@gmail.ru","password":"40bd001563085fc35165329ea1ff5c5ecbdbbeef"},
+{"id":"13","login":"123","email":"123@1","password":"40bd001563085fc35165329ea1ff5c5ecbdbbeef"}
+]
+}
+]

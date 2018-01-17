@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+- phpMyAdmin XML Dump
+- version 4.7.4
+- https://www.phpmyadmin.net
+-
+- Host: 127.0.0.1
+- Generation Time: Jan 17, 2018 at 04:27 AM
+- Server version: 10.1.29-MariaDB
+- PHP Version: 7.0.26
+-->
+
+<pma_xml_export version="1.0" xmlns:pma="https://www.phpmyadmin.net/some_doc_url/">
+    <!--
+    - Structure schemas
+    -->
+    <pma:structure_schemas>
+        <pma:database name="ekzamen" collation="utf8_general_ci" charset="utf8">
+            <pma:table name="articles">
+                CREATE TABLE `articles` (
+                  `id` int(11) NOT NULL AUTO_INCREMENT,
+                  `title` varchar(255) NOT NULL,
+                  `image` varchar(255) NOT NULL,
+                  `text` varchar(255) NOT NULL,
+                  `categorie_id` int(11) NOT NULL,
+                  `pubdate` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+                  `views` int(11) NOT NULL,
+                  PRIMARY KEY (`id`)
+                ) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
+            </pma:table>
+            <pma:table name="articles_categories">
+                CREATE TABLE `articles_categories` (
+                  `id` int(11) NOT NULL AUTO_INCREMENT,
+                  `title` varchar(255) NOT NULL,
+                  PRIMARY KEY (`id`)
+                ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+            </pma:table>
+            <pma:table name="orders">
+                CREATE TABLE `orders` (
+                  `id` int(11) NOT NULL AUTO_INCREMENT,
+                  `id_product` int(11) NOT NULL,
+                  `login` varchar(60) NOT NULL,
+                  PRIMARY KEY (`id`)
+                ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+            </pma:table>
+            <pma:table name="orders_final">
+                CREATE TABLE `orders_final` (
+                  `id` int(11) NOT NULL AUTO_INCREMENT,
+                  `login` varchar(60) NOT NULL,
+                  `adress` varchar(200) NOT NULL,
+                  `id_orders` int(11) NOT NULL,
+                  `tel` int(11) NOT NULL,
+                  `sum` int(11) NOT NULL,
+                  PRIMARY KEY (`id`)
+                ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+            </pma:table>
+            <pma:table name="users">
+                CREATE TABLE `users` (
+                  `id` int(11) NOT NULL AUTO_INCREMENT,
+                  `login` varchar(60) NOT NULL,
+                  `email` varchar(60) NOT NULL,
+                  `password` varchar(60) NOT NULL,
+                  PRIMARY KEY (`id`)
+                ) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
+            </pma:table>
+        </pma:database>
+    </pma:structure_schemas>
+
+    <!--
+    - Database: 'ekzamen'
+    -->
+    <database name="ekzamen">
+        <!-- Table articles -->
+        <table name="articles">
+            <column name="id">1</column>
+            <column name="title">Avto</column>
+            <column name="image">test_1.jpg</column>
+            <column name="text">A toy was created by some one somewher oneday</column>
+            <column name="categorie_id">1</column>
+            <column name="pubdate">2018-01-16 21:50:49</column>
+            <column name="views">21</column>
+        </table>
+        <table name="articles">
+            <column name="id">2</column>
+            <column name="title">Car</column>
+            <column name="image">test_2.jpg</column>
+            <column name="text">A toy was created by some one somewher oneday</column>
+            <column name="categorie_id">1</column>
+            <column name="pubdate">2018-01-16 21:54:18</column>
+            <column name="views">13</column>
+        </table>
+        <table name="articles">
+            <column name="id">3</column>
+            <column name="title">Big screen</column>
+            <column name="image">test_5jpg</column>
+            <column name="text">All what you need this summer</column>
+            <column name="categorie_id">3</column>
+            <column name="pubdate">2018-01-17 03:41:04</column>
+            <column name="views">0</column>
+        </table>
+        <table name="articles">
+            <column name="id">4</column>
+            <column name="title">Book Gary Poter</column>
+            <column name="image">test_3.jpg</column>
+            <column name="text">A toy was created by some one somewher oneday</column>
+            <column name="categorie_id">3</column>
+            <column name="pubdate">2018-01-16 21:54:32</column>
+            <column name="views">12</column>
+        </table>
+        <table name="articles">
+            <column name="id">5</column>
+            <column name="title">Big girl</column>
+            <column name="image">test_1.jpg</column>
+            <column name="text">Kukla pozojayka</column>
+            <column name="categorie_id">2</column>
+            <column name="pubdate">2018-01-17 03:38:21</column>
+            <column name="views">0</column>
+        </table>
+        <table name="articles">
+            <column name="id">7</column>
+            <column name="title">test_1.jpg</column>
+            <column name="image">test_1.jpg</column>
+            <column name="text">test_1.jpg</column>
+            <column name="categorie_id">3</column>
+            <column name="pubdate">2018-01-17 03:38:29</column>
+            <column name="views">0</column>
+        </table>
+        <table name="articles">
+            <column name="id">8</column>
+            <column name="title">Computer</column>
+            <column name="image">test_1.jpg</column>
+            <column name="text">All what you need</column>
+            <column name="categorie_id">3</column>
+            <column name="pubdate">2018-01-17 03:38:29</column>
+            <column name="views">0</column>
+        </table>
+        <!-- Table articles_categories -->
+        <table name="articles_categories">
+            <column name="id">1</column>
+            <column name="title">Toys for boys</column>
+        </table>
+        <table name="articles_categories">
+            <column name="id">2</column>
+            <column name="title">Toys for girls
+</column>
+        </table>
+        <table name="articles_categories">
+            <column name="id">3</column>
+            <column name="title">Toys for teenagers
+
+</column>
+        </table>
+        <!-- Table orders -->
+        <table name="orders">
+            <column name="id">1</column>
+            <column name="id_product">2</column>
+            <column name="login">Anvar</column>
+        </table>
+        <table name="orders">
+            <column name="id">2</column>
+            <column name="id_product">5</column>
+            <column name="login">Anvar53</column>
+        </table>
+        <table name="orders">
+            <column name="id">3</column>
+            <column name="id_product">3</column>
+            <column name="login">Akrom</column>
+        </table>
+        <!-- Table orders_final -->
+        <!-- Table users -->
+        <table name="users">
+            <column name="id">1</column>
+            <column name="login">Anvar53</column>
+            <column name="email">rodar@asd.ri</column>
+            <column name="password">40bd001563085fc35165329ea1ff5c5ecbdbbeef</column>
+        </table>
+        <table name="users">
+            <column name="id">2</column>
+            <column name="login">Galya</column>
+            <column name="email">petrovich@ll.ru</column>
+            <column name="password">40bd001563085fc35165329ea1ff5c5ecbdbbeef</column>
+        </table>
+        <table name="users">
+            <column name="id">3</column>
+            <column name="login">Aygul</column>
+            <column name="email">12@12.rj</column>
+            <column name="password">40bd001563085fc35165329ea1ff5c5ecbdbbeef</column>
+        </table>
+        <table name="users">
+            <column name="id">4</column>
+            <column name="login">Akrom</column>
+            <column name="email">akra@25</column>
+            <column name="password">40bd001563085fc35165329ea1ff5c5ecbdbbeef</column>
+        </table>
+        <table name="users">
+            <column name="id">11</column>
+            <column name="login">Anvar1</column>
+            <column name="email">rodari53@gmail.com</column>
+            <column name="password">40bd001563085fc35165329ea1ff5c5ecbdbbeef</column>
+        </table>
+        <table name="users">
+            <column name="id">12</column>
+            <column name="login">Anvar13</column>
+            <column name="email">rodari53@gmail.ru</column>
+            <column name="password">40bd001563085fc35165329ea1ff5c5ecbdbbeef</column>
+        </table>
+        <table name="users">
+            <column name="id">13</column>
+            <column name="login">123</column>
+            <column name="email">123@1</column>
+            <column name="password">40bd001563085fc35165329ea1ff5c5ecbdbbeef</column>
+        </table>
+    </database>
+</pma_xml_export>
